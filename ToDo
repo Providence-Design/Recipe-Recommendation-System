@@ -1,0 +1,12 @@
+read about java apache mahout
+Organize my data into number of columns
+
+//Todo
+ download and install mysql db using the jdbc driver
+ use JDBC to create the connection
+ populate the csv file with more data
+ insert data from csv file to the database
+ start writing the readme file and a journal that contains what I have learnt by building this app
+ Steps for the database
+ Download latest version of sqlite-jdbc-(VERSION).jar from sqlite-jdbc repository.
+
