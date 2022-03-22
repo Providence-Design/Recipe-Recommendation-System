@@ -9,4 +9,29 @@ Organize my data into number of columns
  start writing the readme file and a journal that contains what I have learnt by building this app
  Steps for the database
  Download latest version of sqlite-jdbc-(VERSION).jar from sqlite-jdbc repository.
+ Use Super CSV
+//Readme
+To run the sqlitedb
+Download sqlite3-tools-win32 for the terminal
+cd to the folder
+Type the command prompt @$f
+sqlite3 name of the database with the extension db
+start typing the sql commands to create a table and insert into the tables values
+****
+create table recipe (cuisine varchar(20), ingredients varchar(25));
+insert into recipe values('Ghanaian', 'Rice, blah blah blah');
+CSV means Comma separated Values
+JDBC(Java Database Connectivity)
+Use JDBC batch update feature to execute the SQL insert statements in batches(each batch as a size of 20 statements)
+for best performance
+ICsvBeanReader is a class in java super csv library
+interface ICsvBeanReader extends ICsvReader
+it an interface for CSV readers reading into objects/beans
+Apache Mahout
+Apache commons CSV
+Open CSV
 
+
+////
+Java bean: it is a reusable software component. A bean encapsulates many objects into one object
+so this object can be accessed from multiple places. It provides easy maintenance.
