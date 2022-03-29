@@ -2,7 +2,7 @@ package RecommendationApp;
 
 public class TestJavaBean {
     public static void main(String[] args){
-        RecipeJavaBean recipe = new RecipeJavaBean();
+        Recipe recipe = new Recipe();
         recipe.setCuisine("chinese");
         recipe.setIngredient("low sodium soy sauce\",\n" +
                 "      \"fresh ginger\",\n" +

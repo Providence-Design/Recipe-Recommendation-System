@@ -11,10 +11,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
 
+// name the class according to what it does. e.g. DBDataLoader
 public class SqliteDB {
   private static String[] header;
 
   public  static  void main(String[] args){
+    // How do i run this class successfully, if I'm not providence?
     String jdbcUrl = "jdbc:sqlite:/C:\\Users\\USER\\Documents\\SQLiteDB\\sqlite-tools-win32-x86-3380100\\recipedb.db";
     //reading from the CSV file into the database using super csv library
     String csvFilePath = "DataFolder/recipes.csv";
@@ -26,6 +28,7 @@ public class SqliteDB {
             new NotNull()//ingredient
     };
 
+    // what happens to the br, if midpoint to uploading the data to the db, your code loses connection to the db
     try {
       Connection connection = DriverManager.getConnection(jdbcUrl);
       connection.setAutoCommit(false);
@@ -35,11 +38,11 @@ public class SqliteDB {
               CsvPreference.STANDARD_PREFERENCE);
       beanReader.getHeader(true);
       String[] header = {"cuisine", "ingredient"};
-      RecipeJavaBean bean = null;
+      Recipe bean = null; // gice 'bean' a clearer name
 
       int count = 0;
 
-      while ((bean = beanReader.read(RecipeJavaBean.class, header, processors)) != null) {
+      while ((bean = beanReader.read(Recipe.class, header, processors)) != null) {
         String cuisineName = bean.getCuisine();
         String ingredients = bean.getIngredient();
 
@@ -82,6 +85,14 @@ public class SqliteDB {
       System.out.println("Error connecting to the SQLite database");
       e.printStackTrace();
     }
+    // finally br.close();
+    // alternatively try with resource
+
+    // TODO:// Log a message that shows the total number of receipes in the DB
+
+
+    // TODO: whats next?
+    // convert this to a spring boot application
   }
 
 
